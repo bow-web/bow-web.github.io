@@ -35,9 +35,9 @@
             <h1 class="text-center"><b>BOW:</b>Bayesian Optimization over Windows for Motion Planning in Complex
                 Environments</h1>
             <br>
-            <div class="text-center">
-                <img src="assets/env_overlay.png" alt="bow" width="50%" style="margin-right: 10px;"/>
-                <img src="assets/cbo_samples.png" alt="another" width="50%"/>
+            <div class="text-center" style="display: flex; justify-content: center; align-items: center;">
+                <img src="assets/env_overlay.png" alt="bow" height="auto" style="margin-right: 10px;"/>
+                <img src="assets/cbo_samples.png" alt="another" height="auto" />
             </div>
             <br>
             <div class="buttons" style="margin-bottom: 8px; text-align: center;">
@@ -65,17 +65,22 @@
         <br>
 
         <!-- SECTION ---------------------------------------------------------------------- -->
-        <h1>BOW</h1>
+        <h1>Unmanned Ground Vehicle Experiments</h1>
         <div class="row">
             <div class="col-md-12">
                 <p>To guide progress on text-based agents and encourage them to behave more ethically, we propose the MACHIAVELLI benchmark. Our environment is based on human-written, text-based Choose-Your-Own-Adventure games containing over half a million scenes with millions of annotations. The games abstract away low-level environment interactions, instead spotlighting high-level social decisions alongside real-world goals to achieve. MACHIAVELLI is a step towards measuring an agent's ability to plan and navigate complex trade-offs in realistic social environments.</p>
             </div>
         </div>
         <div class="row captioned_img">
+            <div class="col-md-12" style="display: flex; flex-wrap: nowrap; overflow-x: auto;">
+                <img src="assets/env_gv/obstacle_map1.png" alt="gv_sim_envs" style="flex: 0 0 auto; width: 20%; margin-right: 5px;"/>
+                <img src="assets/env_gv/obstacle_map2.png" alt="gv_sim_envs" style="flex: 0 0 auto; width: 20%; margin-right: 5px;"/>
+                <img src="assets/env_gv/obstacle_map3.png" alt="gv_sim_envs" style="flex: 0 0 auto; width: 20%; margin-right: 5px;"/>
+                <img src="assets/env_gv/obstacle_map4.png" alt="gv_sim_envs" style="flex: 0 0 auto; width: 20%; margin-right: 5px;"/>
+                <img src="assets/env_gv/obstacle_map5_f.png" alt="gv_sim_envs" style="flex: 0 0 auto; width: 20%;"/>
+            </div>
             <div class="col-md-12">
-                <br>
-                <img src="assets/machiavelli.svg" alt="Machiavelli" width="100%"/>
-                <div class="caption">A mock-up of a game in the MACHIAVELLI benchmark, a suite of text-based reinforcement learning environments. Each environment is a text-based story. At each step, the agent observes the scene and a list of possible actions; it selects an action from the list. The agent receives rewards for completing achievements. Using dense annotations of our environment, we construct a behavioral report of the agent and measure the trade-off between rewards and ethical behavior.</div>
+                <div class="caption">This figure displays five different environments, with Environment 1 on the left and Environment 5 on the right, arranged in chronological order. The blue sphere represents the start location, the green star indicates the goal location, and the red blocks are obstacles.</div>
             </div>
         </div>
         <hr class="divider" />
