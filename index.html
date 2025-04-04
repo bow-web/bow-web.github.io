@@ -184,54 +184,294 @@
             <div class="row">
                 <div class="col-md-12">
                     <div style="overflow-x: auto;">
-
-                        \[\begin{tabular}{@{}lcrcrrrcc@{}}
-                            \toprule
-                            \textbf{Env} & \textbf{Method} & \textbf{Lib. + Lang} &\textbf{Steps} & \textbf{Traj. Length (m)} & \textbf{Total Time (ms)} & \textbf{Time / Step (ms)} & \textbf{Density (\%)} & \textbf{Dispersity (\%)} \\
-                            \midrule
-                            \multirow{6}{*}{1} 
-                                & BOW  & FCL + C++ &203.6 $\pm$ 24.87 & 14.81 $\pm$ 0.56 & \textbf{55.6} $\pm$ 39.0 & \textbf{0.27} & \multirow{6}{*}{5.95} & \multirow{6}{*}{4.39} \\
-                                & HRVO & C++ & 539.0 $\pm$ 4.23 & 15.78 $\pm$ 0.00 & 260.0 $\pm$ 2.96 & 0.48 & & \\
-                                & RRT  & FCL + C++ & 342.0 $\pm$ 64.89 & 17.79 $\pm$ 2.56 & 584.0 $\pm$ 321.0 & 1.71 & & \\
-                                & DWA  & FCL + C++ & 157.0 $\pm$ 1.23 & 14.30 $\pm$ 0.00 & 135.0 $\pm$ 2.31 & 0.86 & & \\
-                                & MPPI & CUDA + Py & \textbf{146.00} & \textbf{13.885} $\pm$ 0.0 & 9705.40 $\pm$ 131.91 & 66.48 & & \\
-                                & CBF  & Gurobi + Py & 155.0 & 14.42 $\pm$ 0.0 & 8837.7 $\pm$ 124.7 & 57.02 & & \\
-                            \midrule
-                            \multirow{6}{*}{2} 
-                                & BOW  & FCL + C++ & 184.4 $\pm$ 8.55 & 14.56 $\pm$ 0.13 & \textbf{35.9} $\pm$ 3.26 & \textbf{0.19} & \multirow{6}{*}{5.60} & \multirow{6}{*}{5.16} \\
-                                & HRVO & C++ & 341.0 $\pm$ 2.68 & 14.87 $\pm$ 0.00 & 286.0 $\pm$ 5.77 & 0.84 & & \\
-                                & RRT  & FCL + C++ & 358.1 $\pm$ 33.60 & 19.38 $\pm$ 2.56 & 816.0 $\pm$ 280.0 & 2.28 & & \\
-                                & DWA  & FCL + C++ & 237.0 $\pm$ 1.86 & 20.83 $\pm$ 0.00 & 74.3 $\pm$ 3.25 & 0.31 & & \\
-                                & MPPI & CUDA + Py   & \textbf{149.00} & \textbf{13.96} $\pm$ 0.0 & 9977.90 $\pm$ 129.77 & 66.97 & & \\
-                                & CBF  & Gurobi + Py & — & — & — & — & & \\
-                            \midrule
-                            \multirow{6}{*}{3} 
-                                & BOW  & FCL + C++ & 168.4 $\pm$ 12.66 & 13.50 $\pm$ 0.39 & \textbf{28.2} $\pm$ 1.25 & \textbf{0.17} & \multirow{6}{*}{5.02} & \multirow{6}{*}{6.20} \\
-                                & HRVO & C++ & 260.0 $\pm$ 2.04 & \textbf{12.95} $\pm$ 0.00 & 511.0 $\pm$ 4.61 & 1.96 & & \\
-                                & RRT  & FCL + C++ & 292.2 $\pm$ 28.50 & 15.85 $\pm$ 1.03 & 644.0 $\pm$ 190.0 & 2.20 & & \\
-                                & DWA  & FCL + C++ & 185.0 $\pm$ 1.45 & 15.66 $\pm$ 0.31 & 112.0 $\pm$ 0.23 & 0.61 & & \\
-                                & MPPI & CUDA + Py  & \textbf{128.00} & 13.03 $\pm$ 0.0 & 8583.6 $\pm$ 109.14 & 67.06 & & \\
-                                & CBF  & Gurobi + Py & 175.0 & 13.482 $\pm$ 0.0 & 12419.3 $\pm$ 141.91 & 70.97 & & \\
-                            \midrule
-                            \multirow{6}{*}{4} 
-                                & BOW  & FCL + C++ & 260.2 $\pm$ 18.28 & 19.49 $\pm$ 0.72 & \textbf{48.2} $\pm$ 2.84 & \textbf{0.19} & \multirow{6}{*}{5.95} & \multirow{6}{*}{5.65} \\
-                                & HRVO & C++ & 465.0 $\pm$ 3.65 & 21.06 $\pm$ 0.00 & 682.0 $\pm$ 13.9 & 1.47 & & \\
-                                & RRT  & FCL + C++ & 491.8 $\pm$ 103.32 & 26.76 $\pm$ 4.59 & 1153.0 $\pm$ 1183.0 & 2.34 & & \\
-                                & DWA  & FCL + C++ & 374.0 $\pm$ 2.94 & 34.43 $\pm$ 0.00 & 209.0 $\pm$ 0.36 & 0.56 & & \\
-                                & MPPI & CUDA + Py   & 204.00 & 18.91 $\pm$ 0.0 & 10863.30 $\pm$ 185.08 & 53.25 & & \\
-                                & CBF  & Gurobi + Py & \textbf{183.0} & \textbf{18.68} $\pm$ 0.0 & 11636.7 $\pm$ 143.64 & 63.59 & & \\
-                            \midrule
-                            \multirow{6}{*}{5} 
-                                & BOW  & FCL + C++ & 299.5 $\pm$ 88.33 & 13.99 $\pm$ 4.22 & \textbf{78.6} $\pm$ 16.3 & \textbf{0.26} & \multirow{6}{*}{8.30} & \multirow{6}{*}{2.59} \\
-                                & HRVO & C++ & \textbf{164.0} $\pm$ 1.29 & \textbf{6.88} $\pm$ 0.00 & 318.0 $\pm$ 6.08 & 1.94 & & \\
-                                & RRT  & FCL + C++ & 199.2 $\pm$ 32.97 & 10.81 $\pm$ 1.30 & 202.0 $\pm$ 66.5 & 1.01 & & \\
-                                & DWA  & FCL + C++ & — & — & — & — & & \\
-                                & MPPI & CUDA + Py   & 486.00 & 9.91 $\pm$ 0.0 & 25687.50 $\pm$ 490.50 & 52.85 & & \\
-                                & CBF  & Gurobi + Py & — & — & — & — & & \\
-                            \bottomrule
-                        \end{tabular}\]
+                        <table class="table table-bordered table-striped">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div style="overflow-x: auto;">
+                                        <table class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th><strong>Env</strong></th>
+                                                    <th><strong>Method</strong></th>
+                                                    <th><strong>Lib. + Lang</strong></th>
+                                                    <th><strong>Steps</strong></th>
+                                                    <th><strong>Traj. Length (m)</strong></th>
+                                                    <th><strong>Total Time (ms)</strong></th>
+                                                    <th><strong>Time/Step (ms)</strong></th>
+                                                    <th><strong>Density (%)</strong></th>
+                                                    <th><strong>Dispersity (%)</strong></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Environment 1 -->
+                                                <tr>
+                                                    <td rowspan="6">1</td>
+                                                    <td><strong>BOW</strong></td>
+                                                    <td>FCL + C++</td>
+                                                    <td>203.6 ± 24.87</td>
+                                                    <td>14.81 ± 0.56</td>
+                                                    <td><strong>55.6 ± 39.0</strong></td>
+                                                    <td><strong>0.27</strong></td>
+                                                    <td rowspan="6">5.95</td>
+                                                    <td rowspan="6">4.39</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>HRVO</td>
+                                                    <td>C++</td>
+                                                    <td>539.0 ± 4.23</td>
+                                                    <td>15.78 ± 0.00</td>
+                                                    <td>260.0 ± 2.96</td>
+                                                    <td>0.48</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RRT</td>
+                                                    <td>FCL + C++</td>
+                                                    <td>342.0 ± 64.89</td>
+                                                    <td>17.79 ± 2.56</td>
+                                                    <td>584.0 ± 321.0</td>
+                                                    <td>1.71</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DWA</td>
+                                                    <td>FCL + C++</td>
+                                                    <td>157.0 ± 1.23</td>
+                                                    <td>14.30 ± 0.00</td>
+                                                    <td>135.0 ± 2.31</td>
+                                                    <td>0.86</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MPPI</td>
+                                                    <td>CUDA + Py</td>
+                                                    <td><strong>146.00</strong></td>
+                                                    <td><strong>13.885 ± 0.0</strong></td>
+                                                    <td>9705.40 ± 131.91</td>
+                                                    <td>66.48</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CBF</td>
+                                                    <td>Gurobi + Py</td>
+                                                    <td>155.0</td>
+                                                    <td>14.42 ± 0.0</td>
+                                                    <td>8837.7 ± 124.7</td>
+                                                    <td>57.02</td>
+                                                </tr>
+                                                <!-- Environment 2 -->
+                                                <tr>
+                                                    <td rowspan="6">2</td>
+                                                    <td><strong>BOW</strong></td>
+                                                    <td>FCL + C++</td>
+                                                    <td>184.4 ± 8.55</td>
+                                                    <td>14.56 ± 0.13</td>
+                                                    <td><strong>35.9 ± 3.26</strong></td>
+                                                    <td><strong>0.19</strong></td>
+                                                    <td rowspan="6">5.60</td>
+                                                    <td rowspan="6">5.16</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>HRVO</td>
+                                                    <td>C++</td>
+                                                    <td>341.0 ± 2.68</td>
+                                                    <td>14.87 ± 0.00</td>
+                                                    <td>286.0 ± 5.77</td>
+                                                    <td>0.84</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RRT</td>
+                                                    <td>FCL + C++</td>
+                                                    <td>358.1 ± 33.60</td>
+                                                    <td>19.38 ± 2.56</td>
+                                                    <td>816.0 ± 280.0</td>
+                                                    <td>2.28</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DWA</td>
+                                                    <td>FCL + C++</td>
+                                                    <td>237.0 ± 1.86</td>
+                                                    <td>20.83 ± 0.00</td>
+                                                    <td>74.3 ± 3.25</td>
+                                                    <td>0.31</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MPPI</td>
+                                                    <td>CUDA + Py</td>
+                                                    <td><strong>149.00</strong></td>
+                                                    <td><strong>13.96 ± 0.0</strong></td>
+                                                    <td>9977.90 ± 129.77</td>
+                                                    <td>66.97</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CBF</td>
+                                                    <td>Gurobi + Py</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <!-- Environment 3 -->
+                                                <tr>
+                                                    <td rowspan="6">3</td>
+                                                    <td><strong>BOW</strong></td>
+                                                    <td>FCL + C++</td>
+                                                    <td>168.4 ± 12.66</td>
+                                                    <td>13.50 ± 0.39</td>
+                                                    <td><strong>28.2 ± 1.25</strong></td>
+                                                    <td><strong>0.17</strong></td>
+                                                    <td rowspan="6">5.02</td>
+                                                    <td rowspan="6">6.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>HRVO</td>
+                                                    <td>C++</td>
+                                                    <td>260.0 ± 2.04</td>
+                                                    <td><strong>12.95 ± 0.00</strong></td>
+                                                    <td>511.0 ± 4.61</td>
+                                                    <td>1.96</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RRT</td>
+                                                    <td>FCL + C++</td>
+                                                    <td>292.2 ± 28.50</td>
+                                                    <td>15.85 ± 1.03</td>
+                                                    <td>644.0 ± 190.0</td>
+                                                    <td>2.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DWA</td>
+                                                    <td>FCL + C++</td>
+                                                    <td>185.0 ± 1.45</td>
+                                                    <td>15.66 ± 0.31</td>
+                                                    <td>112.0 ± 0.23</td>
+                                                    <td>0.61</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MPPI</td>
+                                                    <td>CUDA + Py</td>
+                                                    <td><strong>128.00</strong></td>
+                                                    <td>13.03 ± 0.0</td>
+                                                    <td>8583.6 ± 109.14</td>
+                                                    <td>67.06</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CBF</td>
+                                                    <td>Gurobi + Py</td>
+                                                    <td>175.0</td>
+                                                    <td>13.482 ± 0.0</td>
+                                                    <td>12419.3 ± 141.91</td>
+                                                    <td>70.97</td>
+                                                </tr>
+                                                <!-- Environment 4 -->
+                                                <tr>
+                                                    <td rowspan="6">4</td>
+                                                    <td><strong>BOW</strong></td>
+                                                    <td>FCL + C++</td>
+                                                    <td>260.2 ± 18.28</td>
+                                                    <td>19.49 ± 0.72</td>
+                                                    <td><strong>48.2 ± 2.84</strong></td>
+                                                    <td><strong>0.19</strong></td>
+                                                    <td rowspan="6">5.95</td>
+                                                    <td rowspan="6">5.65</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>HRVO</td>
+                                                    <td>C++</td>
+                                                    <td>465.0 ± 3.65</td>
+                                                    <td>21.06 ± 0.00</td>
+                                                    <td>682.0 ± 13.9</td>
+                                                    <td>1.47</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RRT</td>
+                                                    <td>FCL + C++</td>
+                                                    <td>491.8 ± 103.32</td>
+                                                    <td>26.76 ± 4.59</td>
+                                                    <td>1153.0 ± 1183.0</td>
+                                                    <td>2.34</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DWA</td>
+                                                    <td>FCL + C++</td>
+                                                    <td>374.0 ± 2.94</td>
+                                                    <td>34.43 ± 0.00</td>
+                                                    <td>209.0 ± 0.36</td>
+                                                    <td>0.56</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MPPI</td>
+                                                    <td>CUDA + Py</td>
+                                                    <td>204.00</td>
+                                                    <td>18.91 ± 0.0</td>
+                                                    <td>10863.30 ± 185.08</td>
+                                                    <td>53.25</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CBF</td>
+                                                    <td>Gurobi + Py</td>
+                                                    <td><strong>183.0</strong></td>
+                                                    <td><strong>18.68 ± 0.0</strong></td>
+                                                    <td>11636.7 ± 143.64</td>
+                                                    <td>63.59</td>
+                                                </tr>
+                                                <!-- Environment 5 -->
+                                                <tr>
+                                                    <td rowspan="6">5</td>
+                                                    <td><strong>BOW</strong></td>
+                                                    <td>FCL + C++</td>
+                                                    <td>299.5 ± 88.33</td>
+                                                    <td>13.99 ± 4.22</td>
+                                                    <td><strong>78.6 ± 16.3</strong></td>
+                                                    <td><strong>0.26</strong></td>
+                                                    <td rowspan="6">8.30</td>
+                                                    <td rowspan="6">2.59</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>HRVO</td>
+                                                    <td>C++</td>
+                                                    <td><strong>164.0 ± 1.29</strong></td>
+                                                    <td><strong>6.88 ± 0.00</strong></td>
+                                                    <td>318.0 ± 6.08</td>
+                                                    <td>1.94</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RRT</td>
+                                                    <td>FCL + C++</td>
+                                                    <td>199.2 ± 32.97</td>
+                                                    <td>10.81 ± 1.30</td>
+                                                    <td>202.0 ± 66.5</td>
+                                                    <td>1.01</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DWA</td>
+                                                    <td>FCL + C++</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MPPI</td>
+                                                    <td>CUDA + Py</td>
+                                                    <td>486.00</td>
+                                                    <td>9.91 ± 0.0</td>
+                                                    <td>25687.50 ± 490.50</td>
+                                                    <td>52.85</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CBF</td>
+                                                    <td>Gurobi + Py</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="caption">Performance comparison across five environments. Best values are in bold. Dashes (—) indicate failure to complete the task.</div>
+                                </div>
+                            </div>
+                        </table>
                     </div>
-                    <div class="caption">Performance comparison across five environments (best values in bold). Density and dispersity vary as noted.</div>
+                    <div class="caption">Performance comparison across five environments. Best values are in bold. Dashes (—) indicate failure to complete the task.</div>
                 </div>
             </div>
             <hr class="divider" />
