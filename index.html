@@ -120,11 +120,122 @@
             </div>
             <hr class="divider" />
 
+            <!-- SECTION: Unmanned Aerial Vehicle Experiments -->
+            <h1>Unmanned Aerial Vehicle Experiments</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>To demonstrate scalability, the BOW Planner was applied to a 6DOF aerial robot in a 3D environment with obstacles. The robot’s state is a 12D vector (position, velocity, orientation, and their derivatives), with control inputs as linear velocities and yaw rate. Evaluated in both CoppeliaSim simulations and real-world tests, BOW efficiently navigated UAVs through varied obstacle densities (0.04–0.14) and dispersities (2.38–4.15), achieving planning times as low as 5.64 ms.</p>
+                </div>
+            </div>
+            <div class="row captioned_img">
+                <div class="col-md-12" style="display: flex; flex-wrap: nowrap; overflow-x: auto;">
+                    <img src="assets/env_uav/env1_f.png" alt="UAV Env 1" style="flex: 0 0 auto; width: 20%; margin-right: 5px;" />
+                    <img src="assets/env_uav/env2.png" alt="UAV Env 2" style="flex: 0 0 auto; width: 20%; margin-right: 5px;" />
+                    <img src="assets/env_uav/env3.png" alt="UAV Env 3" style="flex: 0 0 auto; width: 20%; margin-right: 5px;" />
+                    <img src="assets/env_uav/env4.png" alt="UAV Env 4" style="flex: 0 0 auto; width: 20%; margin-right: 5px;" />
+                    <img src="assets/env_uav/env5_f.png" alt="UAV Env 5" style="flex: 0 0 auto; width: 20%;" />
+                </div>
+                <div class="col-md-12">
+                    <div class="caption">Five simulated 3D environments for UAVs using BOW in CoppeliaSim (red cubes are obstacles).</div>
+                </div>
+            </div>
+            <div class="video">
+                <div class="row">
+                    <div class="col-md-12">
+                        <video width="100%" height="auto" controls>
+                            <source src="videos/sim_quad.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="caption">BOW Planner performance in a simulated UAV 3D environment with static obstacles in CoppeliaSim.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="video">
+                <div class="row">
+                    <div class="col-md-12">
+                        <video width="100%" height="auto" controls>
+                            <source src="videos/exp_quad.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="caption">Real-world UAV navigation through 3D environments with obstacles using BOW.</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="divider" />
+
             <!-- SECTION: Benchmark Results -->
             <h1>Benchmark Results</h1>
             <div class="row">
                 <div class="col-md-12">
-                    <p>The BOW Planner was benchmarked against RRT, DWA, MPPI, HRVO, and CBF across five environments with varying obstacle densities (5.02%–8.30%) and dispersities (2.59%–6.20%). BOW consistently achieved the fastest planning times (28.2–78.6 ms) and per-step execution (0.17–0.27 ms), with competitive trajectory lengths (13.50–19.49 m), outperforming others in computational efficiency.</p>
+                    <p>The BOW Planner was benchmarked against RRT, DWA, MPPI, HRVO, and CBF across five environments with varying obstacle densities (5.02%–8.30%) and dispersities (2.59%–6.20%). BOW consistently achieved the fastest planning times (28.2–78.6 ms) and per-step execution (0.17–0.27 ms), with competitive trajectory lengths (13.50–19.49 m), outperforming others in computational efficiency. The table below summarizes performance in Environment 1.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Method</th>
+                                <th>Steps</th>
+                                <th>Trajectory Length (m)</th>
+                                <th>Total Time (ms)</th>
+                                <th>Time/Step (ms)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>BOW</strong></td>
+                                <td>203.6 ± 24.87</td>
+                                <td>14.81 ± 0.56</td>
+                                <td><strong>55.6 ± 39.0</strong></td>
+                                <td><strong>0.27</strong></td>
+                            </tr>
+                            <tr>
+                                <td>HRVO</td>
+                                <td>539.0 ± 4.23</td>
+                                <td>15.78 ± 0.00</td>
+                                <td>260.0 ± 2.96</td>
+                                <td>0.48</td>
+                            </tr>
+                            <tr>
+                                <td>RRT</td>
+                                <td>549.0 ± 4.23</td>
+                                <td>15.78 ± 0.00</td>
+                                <td>260.0 ± 2.96</td>
+                                <td>0.48</td>
+                            </tr>
+                            <tr>
+                                <td>DWA</td>
+                                <td>157.0 ± 1.23</td>
+                                <td>14.30 ± 0.00</td>
+                                <td>135.0 ± 2.31</td>
+                                <td>0.86</td>
+                            </tr>
+                            <tr>
+                                <td>MPPI</td>
+                                <td>146.00</td>
+                                <td><strong>13.885 ± 0.0</strong></td>
+                                <td>9705.40 ± 131.91</td>
+                                <td>66.48</td>
+                            </tr>
+                            <tr>
+                                <td>CBF</td>
+                                <td>155.0</td>
+                                <td>14.42 ± 0.0</td>
+                                <td>8837.7 ± 124.7</td>
+                                <td>57.02</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="caption">Performance comparison in Environment 1 (Density: 5.95%, Dispersity: 4.39%). Best values are in bold.</div>
                 </div>
             </div>
             <hr class="divider" />
