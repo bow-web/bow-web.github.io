@@ -85,16 +85,32 @@
                 <p>We implemented the BOW Planner for a non-holonomic differential wheel robot navigating through a 2D space with obstacles. Experiments were conducted across five simulated environments and replicated in CoppeliaSim. The robot’s state is a 5D vector (position, orientation, linear and angular velocities), with control inputs as linear and angular velocities. BOW demonstrated rapid navigation and obstacle avoidance, even treating other robots as dynamic obstacles in multi-robot scenarios.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 d-flex flex-nowrap overflow-auto">
-                <img src="assets/env_gv/env1_t.png" alt="Environment 1" class="img-fluid" style="width: 16.5%; margin-right: 5px;" />
-                <img src="assets/env_gv/env2_t.png" alt="Environment 2" class="img-fluid" style="width: 16.5%; margin-right: 5px;" />
-                <img src="assets/env_gv/env3_t.png" alt="Environment 3" class="img-fluid" style="width: 16.5%; margin-right: 5px;" />
-                <img src="assets/env_gv/env4_t.png" alt="Environment 4" class="img-fluid" style="width: 16.5%; margin-right: 5px;" />
-                <img src="assets/env_gv/env5_t.png" alt="Environment 5" class="img-fluid" style="width: 16.5%; margin-right: 5px" />
-                <img src="assets/env_gv/env6_t.png" alt="Environment 6" class="img-fluid" style="width: 16.5%;"/>
+        <div class="container mt-4">
+            <div class="row">
+                <!-- First row with 4 images -->
+                <div class="col-md-12 d-flex flex-nowrap overflow-auto mb-3">
+                    <img src="assets/env_gv/env1_t.png" alt="Environment 1" class="img-fluid" style="width: 24.0%; margin-right: 5px;" />
+                    <img src="assets/env_gv/env2_t.png" alt="Environment 2" class="img-fluid" style="width: 24.0%; margin-right: 5px;" />
+                    <img src="assets/env_gv/env3_t.png" alt="Environment 3" class="img-fluid" style="width: 24.0%; margin-right: 5px;" />
+                    <img src="assets/env_gv/env4_t.png" alt="Environment 4" class="img-fluid" style="width: 24.0%;" />
+                </div>
             </div>
-            <div class="col-md-12 text-center mt-2"><em>Six simulated 20m×20m environments (Environments 1-6, from left to right) where black squares represent obstacles in the first five, and the sixth environment features non-convex obstacles composed of clustered green triangles. The curved trajectories display a blue-to-red gradient indicating increasing linear velocity from low to high.</em></div>
+            
+            <div class="row">
+                <!-- Second row with 3 images -->
+                <div class="col-md-12 d-flex flex-nowrap overflow-auto">
+                    <img src="assets/env_gv/env5_t.png" alt="Environment 5" class="img-fluid" style="width: 32.0%; margin-right: 5px" />
+                    <img src="assets/env_gv/env6_t.png" alt="Environment 6" class="img-fluid" style="width: 32.0%; margin-right: 5px" />
+                    <img src="assets/env_gv/bug_trap_result.png" alt="Environment 7" class="img-fluid" style="width: 32.0%;"/>
+                </div>
+            </div>
+            
+            <!-- Single caption for both rows -->
+            <div class="row">
+                <div class="col-md-12 text-center mt-3">
+                    <em>Seven simulated 20m×20m environments where black squares represent obstacles in the first five environments, and the sixth environment features non-convex obstacles composed of clustered green triangles. The seventh shows bug trap results. The curved trajectories display a blue-to-red gradient indicating increasing linear velocity from low to high.</em>
+                </div>
+            </div>
         </div>
         <div class="row mt-4">
             <div class="col-md-12">
