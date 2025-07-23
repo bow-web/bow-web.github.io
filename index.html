@@ -112,6 +112,8 @@
                 </div>
             </div>
         </div>
+
+        
         <div class="row mt-4">
             <div class="col-md-12">
                 <video controls style="width: 60%; max-width: 600px; display: block; margin: 0 auto;">
@@ -186,6 +188,42 @@
             <div class="col-md-12" style="margin-bottom: 20px;"></div>
         </div>
         <hr class="my-5" />
+
+        
+    <div class="container">
+        <h1>Experiments in Poisson Forest Environment for Both UAV and UGV</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <p>We implemented the BOW Planner for a non-holonomic differential wheel robot and a UAV navigating through 2D and 3D Poisson forest environments, respectively. Experiments were conducted in procedurally generated forest environments with obstacles distributed using Poisson sampling to mimic natural, non-uniform obstacle patterns. BOW demonstrated robust navigation and obstacle avoidance in complex organic obstacle arrangements, validated through three trials each for UGV and UAV platforms.</p>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <!-- First row with UGV images -->
+                <div class="col-md-12 d-flex flex-nowrap overflow-auto mb-3">
+                    <img src="assets/poisson_forest/ugv/ugv_trial_1.png" alt="UGV Trial 1" class="img-fluid" style="width: 32.0%; margin-right: 5px;" />
+                    <img src="assets/poisson_forest/ugv/ugv_trial_2.png" alt="UGV Trial 2" class="img-fluid" style="width: 32.0%; margin-right: 5px;" />
+                    <img src="assets/poisson_forest/ugv/ugv_trial_3.png" alt="UGV Trial 3" class="img-fluid" style="width: 32.0%;" />
+                </div>
+                <!-- Caption for UGV row -->
+                <div class="col-md-12 text-center mt-2 mb-4">
+                    <em>BOW planner performance for UGV in three 2D Poisson forest environments with obstacle densities of 1.0, 1.5, and 2.0 per m². The green and red dots denote the start and goal positions, respectively, with curved trajectories showing a blue-to-red gradient indicating increasing linear velocity.</em>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Second row with UAV images -->
+                <div class="col-md-12 d-flex flex-nowrap overflow-auto">
+                    <img src="assets/poisson_forest/uav/uav_trial_1.png" alt="UAV Trial 1" class="img-fluid" style="width: 32.0%; margin-right: 5px" />
+                    <img src="assets/poisson_forest/uav/uav_trial_2.png" alt="UAV Trial 2" class="img-fluid" style="width: 32.0%; margin-right: 5px" />
+                    <img src="assets/poisson_forest/uav/uav_trial_3.png" alt="UAV Trial 3" class="img-fluid" style="width: 32.0%;" />
+                </div>
+                <!-- Caption for UAV row -->
+                <div class="col-md-12 text-center mt-2">
+                    <em>BOW planner performance for UAV in three 3D Poisson forest environments with obstacle density of 1.0, 2.0, and 3.0 per m³. The green and gold spheres denote the start and goal positions, respectively, with trajectories shown with a blue line.</em>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <!-- SECTION: Benchmark Results -->
         <h1>Benchmark Results</h1>
